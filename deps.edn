@@ -1,0 +1,27 @@
+{:paths ["resources" "src"]
+ :deps
+ {matcho/matcho
+  ;; {:git/url "https://github.com/HealthSamurai/matcho"
+  ;;  :tag     "0.1.1"
+  ;;  :sha     "851d2445be1cf56ac6faaad094ba026f1c3e7e70"}
+  {:mvn/version "0.1.0-RC6"}
+  org.clojure/clojure    {:mvn/version "1.9.0"}
+  org.clojure/spec.alpha {:mvn/version "0.2.168"}}
+
+ :aliases
+ {:nrepl
+  {:extra-deps
+   {org.clojure/tools.nrepl       {:mvn/version "0.2.13"}
+    cider/cider-nrepl             {:mvn/version "0.18.0-SNAPSHOT"}
+    refactor-nrepl/refactor-nrepl {:mvn/version "2.4.0-SNAPSHOT"}}
+   :main-opts
+   ["-e" "(require,'cider-nrepl.main)(cider-nrepl.main/init,[\"refactor-nrepl.middleware/wrap-refactor\",\"cider.nrepl/cider-middleware\"])"]}
+
+  :test {:extra-paths ["test"] :extra-deps {org.clojure/test.check {:mvn/version "RELEASE"}}}
+
+  :runner
+  {:extra-deps
+   {com.cognitect/test-runner
+    {:git/url "https://github.com/cognitect-labs/test-runner"
+     :sha     "78d380d00e7a27f7b835bb90af37e73b20c49bcc"}}
+   :main-opts ["-m" "cognitect.test-runner" "-d" "test"]}}}
