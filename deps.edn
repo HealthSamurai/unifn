@@ -15,10 +15,8 @@
   :test {:extra-paths ["test"]
          :extra-deps
          {matcho/matcho
-          ;; {:git/url "https://github.com/HealthSamurai/matcho"
-          ;;  :tag     "0.1.1"
-          ;;  :sha     "851d2445be1cf56ac6faaad094ba026f1c3e7e70"}
-          {:mvn/version "0.1.0-RC6"}
+          {:git/url "https://github.com/HealthSamurai/matcho"
+           :sha     "b5dab1e2dc4814fbc3c39154ad5fa0d21bb08064"}
           org.clojure/test.check {:mvn/version "RELEASE"}}}
 
   :runner
