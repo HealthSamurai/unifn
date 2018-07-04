@@ -1,5 +1,7 @@
 # unifn
 
+[![CircleCI](https://circleci.com/gh/HealthSamurai/unifn.svg?style=svg)](https://circleci.com/gh/HealthSamurai/unifn)
+
 Lib is under refactoring, updates come soon.
 
 ## Usage
