@@ -9,8 +9,11 @@ Info will be added, checkout tests for now.
 ## Development
 
 ```
+# run all tests
 clj -A:test:runner
-clj -A:nrepl
+
+# run repl with tests in classpath
+clj -A:test:nrepl
 ```
 
 ## License
